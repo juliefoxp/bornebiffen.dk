@@ -1,3 +1,28 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import '../styles/tailwind.css';
+import Film from'../images/film.mp4';
 ---
+<MainLayout title="Film">
+  <div class="min-h-screen bg-gradient-to-b from-[#FFEFE] to-[#F7DCEB]">
+
+    <video 
+      src={Film} 
+      controls 
+      class="w-full max-w-lg mx-auto px-4 mt-10 mb-10 rounded-lg"
+    >
+      Din browser understøtter ikke video-tagget.
+    </video>
+
+    <div class="px-6">
+      <h2>Rita og Krokodille: Skovturen</h2>
+      <p>15 min</p>
+    </div>
+
+    <!-- Thumbs up and down -->
+    <!-- Scroll: Serien Rita og Krokodille -->
+    <!-- Scroll: Anbefalinger baseret på denne film -->
+
+  </div>
+</MainLayout>
+
