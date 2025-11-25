@@ -1,0 +1,45 @@
+---
+const { title, image, time, variant = "pink" } = Astro.props;
+
+// Variants:
+// pink  → var(--color-accent-400)
+// yellow → var(--color-accent-500)
+// blue → var(--color-secondary-400)
+const backgrounds = {
+  pink: "bg-[var(--color-accent-400)]",
+  yellow: "bg-[var(--color-accent-500)]",
+  blue: "bg-[var(--color-secondary-400)]"
+};
+---
+
+<article
+  class={`rounded-2xl shadow max-w-sm overflow-hidden font-['News Cycle',sans-serif] ${backgrounds[variant]}`}
+>
+  <!-- IMAGE -->
+  {image && (
+    <img src={image} alt={title} class="w-full h-auto rounded-t-2xl" />
+  )}
+
+  <!-- CONTENT -->
+  <div class="p-4">
+
+    <!-- TITLE + HEART -->
+    <div class="flex justify-between items-start">
+      <h2 class="text-[24px] font-semibold leading-tight">{title}</h2>
+      <span class="text-[26px] cursor-pointer">♡</span>
+    </div>
+
+    <!-- TIME -->
+    <p class="text-[24px] mt-2 flex items-center gap-2">
+      <span class="text-[20px]">⏱️</span> {time} min
+    </p>
+
+    <!-- PLAY BUTTON -->
+    <div class="flex justify-center mt-4">
+      <div class="w-20 h-20 rounded-full border-4 border-[var(--color-cta-500)] flex items-center justify-center">
+        <div class="w-10 h-10 border-l-[20px] border-l-[var(--color-cta-500)] border-y-[12px] border-y-transparent ml-1"></div>
+      </div>
+    </div>
+
+  </div>
+</article>

@@ -1,3 +1,23 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Card from "../components/Card.astro"; 
 ---
+
+<MainLayout title="listeview">
+<main>
+
+<Card
+  variant="pink"
+  title="Rita og krokodille: I Biografen"
+  time="5"
+  image="/img/img_12.webp"
+/>
+
+<Card
+  variant="yellow"
+  title="Cirkeline: Klodsmus"
+  time="13"
+  image="/img/img_13.webp"
+/>
+</main>
+</MainLayout>
