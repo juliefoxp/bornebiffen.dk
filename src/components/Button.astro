@@ -1,22 +1,25 @@
 ---
-// Henter parametrene fra Astro.props
-const { variant= "primary", size = "medium" } = Astro.props; 
+ // Henter parametrene fra Astro.props
+ const { variant = "cta", size = "medium" } = Astro.props;
  
-//Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
-const buttonStyling = "border-2 px-16 py-4"; 
+ // Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
+ const buttonStyling = "border-3 px-16 py-4 text-white font-semibold rounded-lg";
  
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
-const variantClasses = {
-"primary": "border-black", /* border-primary-500 */
-"secondary": "border-blue-500" /* border-secondary-500 */
-};
+ // Definer styling for de forskellige varianter
+ const variantClasses = {
+   "primary": "border-black bg-transparent",
+   "secondary": "border-blue-500 bg-transparent",
+   "cta": "border-[#007c98] bg-[#007c98] hover:opacity-80" // ← din CTA-knap
+ };
  
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
-const sizeClasses = {
-"large": "text-4xl",
-"medium": "text-xl",
-"small": "text-large"
-};
+ // Definer styling for størrelser
+ const sizeClasses = {
+   "large": "text-4xl",
+   "medium": "text-xl",
+   "small": "text-lg"
+ };
 ---
-<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+<!-- Sæt classes for knappen sammen med class:list -->
+<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+  <slot>LOG IND</slot>
+</button>
