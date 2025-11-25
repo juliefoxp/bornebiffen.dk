@@ -1,7 +1,49 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
+import '../styles/tailwind.css';
+import børnebiffen from '../images/børnebiffen.png';
+import img_1 from '../images/img_1.webp';
+import Logo from '../images/Logo.png';
+import img_2 from '../images/img_2.webp';
+import img_3 from '../images/img_3.webp';
+import img_4 from '../images/img_4.webp';
+import img_5 from '../images/img_5.webp';
+import img_6 from '../images/img_6.webp';
+import img_7 from '../images/img_7.webp';
+import img_8 from '../images/img_8.webp';
+import img_9 from '../images/img_9.webp';
+import img_10 from '../images/img_10.webp';
 ---
-<MainLayout title="Børnebiffen">
+<MainLayout title="Børnebiffen.dk">
+  <div class="min-h-screen bg-gradient-to-b from-[#FFFFFF] to-[#E5F2F5]">
+    <div class="px-4 py-8">
+      <img src={børnebiffen.src} alt="buet børnebiffen tekst"/>
+      <img src={img_1.src} alt="To børn foran en skærm med Børnebiffen.dk"/>
+      <p>Log ind og få adgang til et univers af sjove og spændende film til børn 3-7 år.</p>
+      <button></button>
+      <img src={img_2.src} alt="Billede af en sky illustration"/>
+      <h2>DOWNLOAD VORES NYE APP</h2>
+      <img src={Logo.src} alt="Børnebiffens Logo"/>
+      <img src={img_3.src} alt="Apple download"/>
+      <img src={img_4.src} alt="Android download"/>
+      <img src={img_2.src} alt="Billede af en sky illustration"/>
+      <p>Hop ind i en verden af små film, store grin og magiske oplevelser - her starter filmglæden med trygge historier, sjove figurer og masser af fantasi.</p>
+      <div class="grid grid-cols-3 gap-4 mt-4">
+        <img src={img_5.src} alt="film inspiration 1"/>
+        <img src={img_6.src} alt="film inspiration 2"/>
+        <img src={img_7.src} alt="film inspiration 3"/>
+        <img src={img_8.src} alt="film inspiration 4"/>
+        <img src={img_9.src} alt="film inspiration 5"/>
+        <img src={img_10.src} alt="film inspiration 6"/>
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+
 	
+
+
+
 		
 </MainLayout>
