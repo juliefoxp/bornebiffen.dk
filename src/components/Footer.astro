@@ -1,5 +1,43 @@
 ---
+import img_footer from '../images/img_footer.png';
 ---
-<footer class="">
-   
+
+<footer class="w-full bg-[#e5f2f5] py-20">
+  <div class="w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center md:justify-items-stretch">
+
+    <!-- Venstre kolonne -->
+    <div class="flex justify-center md:justify-start">
+      <img src={img_footer.src} alt="To børn foran en skærm med Børnebiffen.dk" class="mx-auto md:mx-0 max-w-[180px] md:max-w-[250px] h-auto"/>
+    </div>
+
+    <!-- Midterste kolonne -->
+    <div class="flex justify-center">
+      <ul class="space-y-1 text-center md:text-left text-[var(--color-primary-500)] font-bold">
+        <li><a href="/" class="hover:text-gray-900">Om Børnebiffen</a></li>
+        <li><a href="/" class="hover:text-gray-900">Tilgængelighedserklæring</a></li>
+        <li><a href="/" class="hover:text-gray-900">Cookies</a></li>
+        <li><a href="/" class="hover:text-gray-900">Privatlivspolitik</a></li>
+        <li><a href="/" class="hover:text-gray-900">Kontakt os</a></li>
+      </ul>
+    </div>
+
+    <!-- Højre kolonne -->
+    <div class="flex flex-col items-center md:items-end space-y-1 text-[var(--color-primary-500)] font-bold">
+      <p>DBC DIGITAL A/S</p>
+      <p>Tempovej 7-11</p>
+      <p>2750 Ballerup</p>
+    </div>
+
+  </div>
 </footer>
+
+
+
+
+
+
+
+
+
+
+
