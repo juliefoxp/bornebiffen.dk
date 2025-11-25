@@ -20,33 +20,20 @@
   src: url("/fonts/Domine-Regular.ttf") format("truetype");
 }
 
-@theme {
-  /* Her tilføjes theme variable // tokens */
+:root {
+  /* Farver */
+  --color-primary-500: #5e2779;
+  --color-accent-400: #f7dceb;
+  --color-accent-500: #ffd66e99;
+  --color-neutral-100: #f8f2e9;
+  --color-neutral-900: #000000;
+  --color-secondary-400: #e5f2f5;
+  --color-cta-500: #007c98;
 
-  /*Farver */
-  @theme {
-    /* Primary */
-    --color-primary-500: #5e2779;
-
-    /* Accent */
-    --color-accent-400: #f7dceb;
-    --color-accent-500: #ffd66e99; /* 60% opacity → 99 i HEX */
-
-    /* Neutrals */
-    --color-neutral-100: #f8f2e9;
-    --color-neutral-900: #000000;
-
-    /* Secondary */
-    --color-secondary-400: #e5f2f5;
-
-    /* CTA */
-    --color-cta-500: #007c98;
-  }
-
-  /*Typografi */
+  /* Typografi */
   --font-display: "Fraunces", serif; /* H1 */
   --font-sans: "Nobile", sans-serif; /* H2 */
-  --font-body: "News Cycle", sans-serif; /* brødtekst */
+  --font-body: "News Cycle", sans-serif; /* Brødtekst */
 }
 
 @layer base {
