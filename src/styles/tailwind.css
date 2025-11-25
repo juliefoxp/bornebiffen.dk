@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -6,42 +6,53 @@
 @import "tailwindcss-intersect";
 
 @font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
+  font-family: "Honk";
+  src: url("/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-family: "Quicksand";
+  src: url("/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Domine';
-  src: url('/fonts/Domine-Regular.ttf') format('truetype');
+  font-family: "Domine";
+  src: url("/fonts/Domine-Regular.ttf") format("truetype");
 }
 
 @theme {
   /* Her tilføjes theme variable // tokens */
 
   /*Farver */
-  --color-primary-400: #00E4F5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006D75;
-  --color-secondary-400: #F5E400;
-  --color-secondary-500: #F5A600;
-  --color-secondary-600: #F57A00;
+  @theme {
+    /* Primary */
+    --color-primary-500: #5e2779;
+
+    /* Accent */
+    --color-accent-400: #f7dceb;
+    --color-accent-500: #ffd66e99; /* 60% opacity → 99 i HEX */
+
+    /* Neutrals */
+    --color-neutral-100: #f8f2e9;
+    --color-neutral-900: #000000;
+
+    /* Secondary */
+    --color-secondary-400: #e5f2f5;
+
+    /* CTA */
+    --color-cta-500: #007c98;
+  }
 
   /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
-  --font-serif: 'Domine', serif;
+  --font-display: "Fraunces", serif; /* H1 */
+  --font-sans: "Nobile", sans-serif; /* H2 */
+  --font-body: "News Cycle", sans-serif; /* brødtekst */
 }
 
 @layer base {
 }
 
-@layer components{
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }
