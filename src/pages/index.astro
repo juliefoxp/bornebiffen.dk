@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
-import '../styles/tailwind.css';
+import Heading from "../components/Heading.astro";
 import Button from "../components/Button.astro";
 import børnebiffen from '../images/børnebiffen.png';
 import img_1 from '../images/img_1.webp';
@@ -17,62 +17,74 @@ import img_10 from '../images/img_10.webp';
 ---
 <MainLayout title="Børnebiffen.dk">
   <div class="bg-gradient-to-b from-[#FFFFFF] to-[#E5F2F5]">
-<div class="bg-[#f7dceb] rounded-t-[10000px] rounded-b-none mx-auto mt-10 w-full sm:w-[95%]">
-  <div class="px-4 pt-8 pb-0 flex flex-col items-center">
-    <img src={børnebiffen.src} alt="buet børnebiffen tekst" class="w-full max-w-[350px] sm:max-w-[600px] h-auto"/>
-    <img 
-      src={img_1.src} 
-      alt="To børn foran en skærm med Børnebiffen.dk" 
-      class="w-full max-w-[350px] sm:max-w-[600px] h-auto mt-4"
-    />
+
+    <div class="bg-[#f7dceb] rounded-t-[10000px] rounded-b-none mx-auto mt-16 w-full sm:w-[95%]">
+      <div class="px-6 pt-12 pb-10 flex flex-col items-center gap-6">
+        <img src={børnebiffen.src} alt="buet børnebiffen tekst" class="w-full max-w-[350px] sm:max-w-[600px] h-auto"/>
+        <img src={img_1.src} alt="To børn foran en skærm med Børnebiffen.dk" class="w-full max-w-[350px] sm:max-w-[600px] h-auto"/>
+      </div>
+    </div>
+
+    <section class="flex px-8 md:px-32 lg:px-48 mt-16 mb-16">
+      <div class="max-w-3xl text-left">
+        <Heading stylingclasses="py-8" htmlheading="h3" size="small" font="overskrift">
+          Log ind og få adgang til et univers af sjove og spændende film til børn 3-7 år.
+        </Heading>
+      </div>
+    </section>
+
+    <div class="flex justify-center mb-20">
+      <a href="/listeview">
+        <Button variant="cta" size="medium">LOG IND</Button>
+      </a>
+    </div>
+
+    <img src={img_2.src} alt="Sky illustration" class="w-60 sm:w-32 md:w-90 mt-10 ml-auto mb-12" />
+
+    <div class="bg-[#e5f2f5] rounded-t-[10000px] rounded-b-none w-full sm:w-[95%] mx-auto px-6 py-12">
+
+      <section class="flex justify-center px-8 md:px-24 lg:px-32 mt-16 mb-16">
+        <div class="max-w-4xl text-center">
+          <Heading stylingclasses="font-bold py-8" htmlheading="h2" size="small" font="overskrift">
+            DOWNLOAD VORES NYE APP
+          </Heading>
+        </div>
+      </section>
+
+      <div class="text-center mt-6 mb-8">
+        <img src={Logo.src} alt="Børnebiffens Logo" class="mx-auto" />
+      </div>
+
+      <div class="flex justify-center items-center gap-8 mt-8 flex-wrap">
+        <a href="https://bornebiffen.dk/" target="_blank" rel="noopener noreferrer">
+          <img src={img_3.src} alt="Apple download" class="block max-w-[150px] w-full sm:w-auto" />
+        </a>
+        <a href="https://bornebiffen.dk/" target="_blank" rel="noopener noreferrer">
+          <img src={img_4.src} alt="Android download" class="block max-w-[150px] w-full sm:w-auto" />
+        </a>
+      </div>
+    </div>
+
+    <img src={img_2.src} alt="Sky illustration venstre" class="w-60 sm:w-32 md:w-90 mt-10 mr-auto mb-12" />
+
+    <section class="flex px-8 md:px-24 lg:px-32 mt-16 mb-16">
+      <div class="max-w-4xl text-left">
+        <Heading stylingclasses="py-8" htmlheading="h3" size="small" font="overskrift">
+          Hop ind i en verden af små film, store grin og magiske oplevelser – her starter filmglæden med trygge historier, sjove figurer og masser af fantasi.
+        </Heading>
+      </div>
+    </section>
+
+    <div class="w-full bg-[#f7dceb] py-12">
+      <div class="grid grid-cols-3 gap-8 justify-items-center px-6 lg:px-0">
+        <img src={img_5.src} alt="film inspiration 1" class="h-auto w-full lg:w-[300px]" />
+        <img src={img_6.src} alt="film inspiration 2" class="h-auto w-full lg:w-[300px]" />
+        <img src={img_7.src} alt="film inspiration 3" class="h-auto w-full lg:w-[300px]" />
+        <img src={img_8.src} alt="film inspiration 4" class="h-auto w-full lg:w-[300px]" />
+        <img src={img_9.src} alt="film inspiration 5" class="h-auto w-full lg:w-[300px]" />
+        <img src={img_10.src} alt="film inspiration 6" class="h-auto w-full lg:w-[300px]" />
+      </div>
+    </div>
+
   </div>
-</div>
-
-
-<div class="px-4">
-  <p class="text-center mt-10 mb-4">
-    Log ind og få adgang til et univers af sjove og spændende film til børn 3-7 år.
-  </p>
-  <div class="flex justify-center mb-15">
-    <a href="/listeview">
-      <Button variant="cta" size="medium">LOG IND</Button>
-    </a>
-  </div>
-
-  <img src={img_2.src} alt="Sky illustration" class="w-60 sm:w-32 md:w-90 mt-4 ml-auto mb-6" /> <!-- rykket mere til højre -->
-
-  <!-- Rektangel med runding øverst -->
-<div class="bg-[#e5f2f5] rounded-t-[10000px] rounded-b-none w-full sm:w-[95%] mx-auto px-4 py-8">
-  <h2 class="text-center font-bold mt-5">DOWNLOAD VORES NYE APP</h2>
-  <div class="text-center mt-4">
-    <img src={Logo.src} alt="Børnebiffens Logo" class="mx-auto" />
-  </div>
-  <div class="flex justify-center items-center gap-5 mt-6 flex-wrap">
-    <a href="https://bornebiffen.dk/" target="_blank" rel="noopener noreferrer">
-      <img src={img_3.src} alt="Apple download" class="block max-w-[150px] w-full sm:w-auto" />
-    </a>
-    <a href="https://bornebiffen.dk/" target="_blank" rel="noopener noreferrer">
-      <img src={img_4.src} alt="Android download" class="block max-w-[150px] w-full sm:w-auto" />
-    </a>
-  </div>
-</div>
-
-
-  <img src={img_2.src} alt="Sky illustration venstre" class="w-60 sm:w-32 md:w-90 mt-2 mr-auto mb-6 mt-6" />
-  <p class="text-center mx-auto max-w-xl px-4">
-    Hop ind i en verden af små film, store grin og magiske oplevelser – her starter filmglæden med trygge historier, sjove figurer og masser af fantasi.
-  </p>
-</div>
-
-<!-- Film inspiration-->
-<div class="w-full bg-[#f7dceb]">
-  <div class="grid grid-cols-3 gap-4 mt-4 justify-items-center py-8 px-4 lg:px-0">
-    <img src={img_5.src} alt="film inspiration 1" class="h-auto w-full lg:w-[300px]" />
-    <img src={img_6.src} alt="film inspiration 2" class="h-auto w-full lg:w-[300px]" />
-    <img src={img_7.src} alt="film inspiration 3" class="h-auto w-full lg:w-[300px]" />
-    <img src={img_8.src} alt="film inspiration 4" class="h-auto w-full lg:w-[300px]" />
-    <img src={img_9.src} alt="film inspiration 5" class="h-auto w-full lg:w-[300px]" />
-    <img src={img_10.src} alt="film inspiration 6" class="h-auto w-full lg:w-[300px]" />
-  </div>
-</div>
 </MainLayout>
