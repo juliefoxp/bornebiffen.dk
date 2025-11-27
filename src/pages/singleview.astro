@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import '../styles/tailwind.css';
 import Film from'../images/film.mp4';
+import Heading from "../components/Heading.astro";
 ---
 <MainLayout title="Film">
   <div class="min-h-screen bg-gradient-to-b from-[#FFEFE] to-[#F7DCEB]">
@@ -9,20 +10,357 @@ import Film from'../images/film.mp4';
     <video 
       src={Film} 
       controls 
-      class="w-full max-w-lg mx-auto px-4 mt-10 mb-10 rounded-lg"
+      class="w-full max-w-4xl mx-auto px-4 mt-10 mb-10 rounded-lg"
     >
-      Din browser understøtter ikke video-tagget.
     </video>
 
-    <div class="px-6">
-      <h2>Rita og Krokodille: Skovturen</h2>
-      <p>15 min</p>
+    <!-- Gør content bredere -->
+    <div class="px-6 md:px-24 lg:px-40 xl:px-56">
+
+      <div class="w-full text-center md:text-left">
+        <Heading 
+          stylingclasses="text-[#5e2779] font-bold" 
+          htmlheading="h2" 
+          size="medium" 
+          font="overskrift"
+        >
+          Rita og Krokodille: Skovturen
+        </Heading>
+      </div>
+
+      <div class="flex items-center gap-1 mt-1 md:mt-2">
+        <img src="/ur.svg" alt="Ur" class="w-10 h-10" />
+        <span class="text-[14px] sm:text-[24px] md:text-[25px]">15 min</span>
+      </div>
     </div>
 
-    <!-- Thumbs up and down -->
-    <!-- Scroll: Serien Rita og Krokodille -->
-    <!-- Scroll: Anbefalinger baseret på denne film -->
+        <!-- Thumbs ikoner -->
+<div class="flex justify-center py-10">
+  <img 
+    src="/thumbs.svg" 
+    alt="Thumbs" 
+    class="w-40 md:w-56"
+  />
+</div>
+
+<!-- SERIEN: RITA OG KROKODILLE -->
+<!-- Blå baggrund sektion med vandret scroll -->
+<section class="bg-[#e5f2f5] overflow-x-auto py-8 mt-20 mb-25">
+
+<div class="px-6 md:px-16 lg:px-24 pt-2 pb-6 mt-10 mb-10">
+  <Heading 
+  stylingclasses="text-[#5e2779] font-bold" 
+    htmlheading="h1" 
+    size="small" 
+    font="overskrift"
+  >
+SERIEN: RITA OG KROKODILLE
+  </Heading>
+</div>
+
+  <div class="flex flex-nowrap gap-4 min-w-max justify-center px-4">
+    <!-- Her kommer kortene -->
+
+    <!-- Card 1 - Lyserød -->
+    <div class="flex-none w-64 sm:w-56 md:w-60 lg:w-64 bg-pink-200 rounded-2xl overflow-hidden flex flex-col">
+      <img src="src/images/img_12.webp" alt="Rita og krokodille" class="w-full h-40 sm:h-36 md:h-40 object-cover" />
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h3 class="font-semibold text-base sm:text-sm md:text-base mb-4">Rita og krokodille: I Biografen</h3>
+          <div class="flex items-center mb-4">
+            <div class="flex items-center gap-1">
+              <img src="/ur.svg" alt="Ur" class="w-5 h-5" />
+              <span class="text-[14px] sm:text-[12px] md:text-[14px]">5 min</span>
+            </div>
+            <div class="flex-grow"></div>
+            <img src="/tomt_hjerte.svg" alt="Hjerte" class="w-6 h-6 cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="/singleview">
+            <img 
+              src="/play_knap.svg" 
+              alt="Play" 
+              class="w-16 h-16 sm:w-12 sm:h-12 md:w-16 md:h-16 transform transition duration-300 hover:scale-110" 
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 - Gul (30% opacity) -->
+    <div class="flex-none w-64 sm:w-56 md:w-60 lg:w-64 rounded-2xl overflow-hidden flex flex-col"
+         style="background-color: #ffd66e4d;">
+      <img src="src/images/img_48.webp" alt="Rita og krokodille: Blåbær" class="w-full h-40 sm:h-36 md:h-40 object-cover" />
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h3 class="font-semibold text-base sm:text-sm md:text-base mb-4">Rita og krokodille: Blåbær</h3>
+          <div class="flex items-center mb-4">
+            <div class="flex items-center gap-1">
+              <img src="/ur.svg" alt="Ur" class="w-5 h-5" />
+              <span class="text-[14px] sm:text-[12px] md:text-[14px]">5 min</span>
+            </div>
+            <div class="flex-grow"></div>
+            <img src="/tomt_hjerte.svg" alt="Hjerte" class="w-6 h-6 cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="/singleview">
+            <img 
+              src="/play_knap.svg" 
+              alt="Play" 
+              class="w-16 h-16 sm:w-12 sm:h-12 md:w-16 md:h-16 transform transition duration-300 hover:scale-110" 
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 - Lyserød -->
+    <div class="flex-none w-64 sm:w-56 md:w-60 lg:w-64 bg-pink-200 rounded-2xl overflow-hidden flex flex-col">
+      <img src="src/images/img_49.webp" alt="Rita og krokodille: I Biografen" class="w-full h-40 sm:h-36 md:h-40 object-cover" />
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h3 class="font-semibold text-base sm:text-sm md:text-base mb-4">Rita og krokodille: I Biografen</h3>
+          <div class="flex items-center mb-4">
+            <div class="flex items-center gap-1">
+              <img src="/ur.svg" alt="Ur" class="w-5 h-5" />
+              <span class="text-[14px] sm:text-[12px] md:text-[14px]">5 min</span>
+            </div>
+            <div class="flex-grow"></div>
+            <img src="/tomt_hjerte.svg" alt="Hjerte" class="w-6 h-6 cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="/singleview">
+            <img 
+              src="/play_knap.svg" 
+              alt="Play" 
+              class="w-16 h-16 sm:w-12 sm:h-12 md:w-16 md:h-16 transform transition duration-300 hover:scale-110" 
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 - Gul (30% opacity) -->
+    <div class="flex-none w-64 sm:w-56 md:w-60 lg:w-64 rounded-2xl overflow-hidden flex flex-col"
+         style="background-color: #ffd66e4d;">
+      <img src="src/images/img_50.webp" alt="Rita og krokodille: Snevejr" class="w-full h-40 sm:h-36 md:h-40 object-cover" />
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h3 class="font-semibold text-base sm:text-sm md:text-base mb-4">Rita og krokodille: Snevejr</h3>
+          <div class="flex items-center mb-4">
+            <div class="flex items-center gap-1">
+              <img src="/ur.svg" alt="Ur" class="w-5 h-5" />
+              <span class="text-[14px] sm:text-[12px] md:text-[14px]">5 min</span>
+            </div>
+            <div class="flex-grow"></div>
+            <img src="/tomt_hjerte.svg" alt="Hjerte" class="w-6 h-6 cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="/singleview">
+            <img 
+              src="/play_knap.svg" 
+              alt="Play" 
+              class="w-16 h-16 sm:w-12 sm:h-12 md:w-16 md:h-16 transform transition duration-300 hover:scale-110" 
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 - Lyserød -->
+    <div class="flex-none w-64 sm:w-56 md:w-60 lg:w-64 bg-pink-200 rounded-2xl overflow-hidden flex flex-col">
+      <img src="src/images/img_51.webp" alt="Rita og krokodille: I Biografen" class="w-full h-40 sm:h-36 md:h-40 object-cover" />
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h3 class="font-semibold text-base sm:text-sm md:text-base mb-4">Rita og krokodille: I Biografen</h3>
+          <div class="flex items-center mb-4">
+            <div class="flex items-center gap-1">
+              <img src="/ur.svg" alt="Ur" class="w-5 h-5" />
+              <span class="text-[14px] sm:text-[12px] md:text-[14px]">5 min</span>
+            </div>
+            <div class="flex-grow"></div>
+            <img src="/tomt_hjerte.svg" alt="Hjerte" class="w-6 h-6 cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="/singleview">
+            <img 
+              src="/play_knap.svg" 
+              alt="Play" 
+              class="w-16 h-16 sm:w-12 sm:h-12 md:w-16 md:h-16 transform transition duration-300 hover:scale-110" 
+            />
+          </a>
+        </div>
+      </div>
+    </div>
 
   </div>
+</section>
+
+<!-- ANBEFALINGER BASERET PÅ DENNE FILM-->
+<!-- Blå baggrund sektion med vandret scroll -->
+<section class="bg-[#e5f2f5] overflow-x-auto py-8 mt-20 mb-25">
+<div class="px-6 md:px-16 lg:px-24 pt-2 pb-6 mt-10 mb-10">
+<Heading 
+  stylingclasses="text-[#5e2779] font-bold" 
+  htmlheading="h1" 
+  size="small" 
+  font="overskrift"
+>
+ANBEFALINGER BASERET PÅ DENNE FILM
+</Heading>
+
+</div>
+
+  <div class="flex flex-nowrap gap-4 min-w-max justify-center px-4">
+    <!-- Her kommer kortene -->
+
+    <!-- Card 1 - Lyserød -->
+    <div class="flex-none w-64 sm:w-56 md:w-60 lg:w-64 bg-pink-200 rounded-2xl overflow-hidden flex flex-col">
+      <img src="src/images/img_17.webp" alt="Den sidste efterårsdag" class="w-full h-40 sm:h-36 md:h-40 object-cover" />
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h3 class="font-semibold text-base sm:text-sm md:text-base mb-4">Den sidste efterårsdag</h3>
+          <div class="flex items-center mb-4">
+            <div class="flex items-center gap-1">
+              <img src="/ur.svg" alt="Ur" class="w-5 h-5" />
+              <span class="text-[14px] sm:text-[12px] md:text-[14px]">7 min</span>
+            </div>
+            <div class="flex-grow"></div>
+            <img src="/tomt_hjerte.svg" alt="Hjerte" class="w-6 h-6 cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="/singleview">
+            <img 
+              src="/play_knap.svg" 
+              alt="Play" 
+              class="w-16 h-16 sm:w-12 sm:h-12 md:w-16 md:h-16 transform transition duration-300 hover:scale-110" 
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 - Gul (30% opacity) -->
+    <div class="flex-none w-64 sm:w-56 md:w-60 lg:w-64 rounded-2xl overflow-hidden flex flex-col"
+         style="background-color: #ffd66e4d;">
+      <img src="src/images/img_18.webp" alt="November" class="w-full h-40 sm:h-36 md:h-40 object-cover" />
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h3 class="font-semibold text-base sm:text-sm md:text-base mb-4">November</h3>
+          <div class="flex items-center mb-4">
+            <div class="flex items-center gap-1">
+              <img src="/ur.svg" alt="Ur" class="w-5 h-5" />
+              <span class="text-[14px] sm:text-[12px] md:text-[14px]">4 min</span>
+            </div>
+            <div class="flex-grow"></div>
+            <img src="/tomt_hjerte.svg" alt="Hjerte" class="w-6 h-6 cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="/singleview">
+            <img 
+              src="/play_knap.svg" 
+              alt="Play" 
+              class="w-16 h-16 sm:w-12 sm:h-12 md:w-16 md:h-16 transform transition duration-300 hover:scale-110" 
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 - Lyserød -->
+    <div class="flex-none w-64 sm:w-56 md:w-60 lg:w-64 bg-pink-200 rounded-2xl overflow-hidden flex flex-col">
+      <img src="src/images/img_19.webp" alt="Snuttefilm: Hele natten" class="w-full h-40 sm:h-36 md:h-40 object-cover" />
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h3 class="font-semibold text-base sm:text-sm md:text-base mb-4">Snuttefilm: Hele natten</h3>
+          <div class="flex items-center mb-4">
+            <div class="flex items-center gap-1">
+              <img src="/ur.svg" alt="Ur" class="w-5 h-5" />
+              <span class="text-[14px] sm:text-[12px] md:text-[14px]">5 min</span>
+            </div>
+            <div class="flex-grow"></div>
+            <img src="/tomt_hjerte.svg" alt="Hjerte" class="w-6 h-6 cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="/singleview">
+            <img 
+              src="/play_knap.svg" 
+              alt="Play" 
+              class="w-16 h-16 sm:w-12 sm:h-12 md:w-16 md:h-16 transform transition duration-300 hover:scale-110" 
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 - Gul (30% opacity) -->
+    <div class="flex-none w-64 sm:w-56 md:w-60 lg:w-64 rounded-2xl overflow-hidden flex flex-col"
+         style="background-color: #ffd66e4d;">
+      <img src="src/images/img_20.webp" alt="Jeg er ikke bange!" class="w-full h-40 sm:h-36 md:h-40 object-cover" />
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h3 class="font-semibold text-base sm:text-sm md:text-base mb-4">Jeg er ikke bange!</h3>
+          <div class="flex items-center mb-4">
+            <div class="flex items-center gap-1">
+              <img src="/ur.svg" alt="Ur" class="w-5 h-5" />
+              <span class="text-[14px] sm:text-[12px] md:text-[14px]">7 min</span>
+            </div>
+            <div class="flex-grow"></div>
+            <img src="/tomt_hjerte.svg" alt="Hjerte" class="w-6 h-6 cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="/singleview">
+            <img 
+              src="/play_knap.svg" 
+              alt="Play" 
+              class="w-16 h-16 sm:w-12 sm:h-12 md:w-16 md:h-16 transform transition duration-300 hover:scale-110" 
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 - Lyserød -->
+    <div class="flex-none w-64 sm:w-56 md:w-60 lg:w-64 bg-pink-200 rounded-2xl overflow-hidden flex flex-col">
+      <img src="src/images/img_21.webp" alt="Ballerina" class="w-full h-40 sm:h-36 md:h-40 object-cover" />
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h3 class="font-semibold text-base sm:text-sm md:text-base mb-4">Ballerina</h3>
+          <div class="flex items-center mb-4">
+            <div class="flex items-center gap-1">
+              <img src="/ur.svg" alt="Ur" class="w-5 h-5" />
+              <span class="text-[14px] sm:text-[12px] md:text-[14px]">11 min</span>
+            </div>
+            <div class="flex-grow"></div>
+            <img src="/tomt_hjerte.svg" alt="Hjerte" class="w-6 h-6 cursor-pointer" />
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <a href="/singleview">
+            <img 
+              src="/play_knap.svg" 
+              alt="Play" 
+              class="w-16 h-16 sm:w-12 sm:h-12 md:w-16 md:h-16 transform transition duration-300 hover:scale-110" 
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </div>
+
 </MainLayout>
+
 
