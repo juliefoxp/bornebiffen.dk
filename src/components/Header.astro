@@ -1,16 +1,69 @@
 ---
 import Logo from '../images/Logo.png';
+import Microphone from '../images/Microphone.png';
+import Login from '../images/Login.png';
 ---
-
-
 <header>
   <nav class="bg-[var(--color-secondary-400)] shadow-md w-full">
-    <div class="flex justify-between items-center h-16 px-4 w-full">
+    <div class="flex justify-between items-center h-16 px-4 max-w-7xl mx-auto">
 
+      <!-- Logo -->
       <a href="/" class="flex-shrink-0">
         <img src={Logo.src} alt="Logo" class="h-10 w-auto" />
       </a>
 
+      <!-- Desktop icons -->
+      <div class="hidden md:flex gap-6 items-center">
+
+        <!-- Microphone icon -->
+        <button class="flex items-center gap-2">
+          <img src={Microphone.src} alt="Tale-søgning" class="h-6 w-6" />
+        </button>
+
+        <!-- Login icon + tekst -->
+        <a href="/login" class="flex items-center gap-2">
+          <img src={Login.src} alt="Login" class="h-6 w-6" />
+          <span class="text-[var(--color-primary-500)] font-medium">
+            Log ind
+          </span>
+        </a>
+      </div>
+
+      <!-- Burger button (mobile) -->
+      <button id="menu-btn" class="md:hidden flex items-center">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[var(--color-secondary-300)] px-4 py-4 flex flex-col gap-4 shadow-inner">
+
+      <!-- Microphone med lilla tekst og font-bold -->
+      <button class="flex items-center gap-2">
+        <img src={Microphone.src} alt="Microphone" class="h-6 w-6" />
+        <span class="text-[var(--color-primary-500)] font-bold">Søg med stemmen</span>
+      </button>
+
+      <!-- Login med lilla tekst og font-bold -->
+      <a href="/login" class="flex items-center gap-2">
+        <img src={Login.src} alt="Login" class="h-6 w-6 object-contain" />
+        <span class="text-[var(--color-primary-500)] font-bold flex items-center">
+          Log ind
+        </span>
+      </a>
+
     </div>
   </nav>
+
+  <!-- Small JS to toggle menu -->
+  <script>
+    document.getElementById("menu-btn").addEventListener("click", () => {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
 </header>
+
